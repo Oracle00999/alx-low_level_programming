@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -10,37 +11,24 @@
  */
 int main(void)
 {
-	int j;
+	int i;
 	char f[] = "Fizz";
 	char b[] = "Buzz";
 	char fb[] = "FizzBuzz";
 
-	j = 1;
-	while (j <= 100)
+	for (i = 1; i <= 100; i++)
 	{
-		if (j % 3 == 0 && j % 5 != 0)
-		{
-			printf(" %s", f);
-		}
-		else if (j % 5 == 0 && j % 3 != 0)
-		{
-			printf(" %s", b);
-		}
-		else if (j % 3 == 0 && j % 5 == 0)
-		{
-			printf(" %s", fb);
-		}
-		else if (j == 1)
-		{
-			printf("%d", j);
-		}
+		if (i == 100)
+			printf("%s", b);
+		else if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%s ", fb);
+		else if (i % 3 == 0)
+			printf("%s ", f);
+		else if (i % 5 == 0)
+			printf("%s ", b);
 		else
-		{
-		printf(" %d", j);
-		}
-		j++;
+			printf("%d ", i);
 	}
 	printf("\n");
-
 	return (0);
 }
