@@ -10,26 +10,14 @@
  */
 int main(void)
 {
-	long int n = 612852475143, m = 0;
-	long int i;
+	long i;
+	long num = 612852475143;
 
-	for (i = 3; i * i <= n; i += 2)
+	for (i = 2; i < num; i++)
 	{
-		if (n % i == 0)
-		{
-			m = i;
-			while (n % i == 0)
-			{
-				n /= i;
-			}
-		}
+		if (num % i == 0)
+			num /= i;
 	}
-
-	if (n > 1)
-	{
-		m = n;
-	}
-	printf("%ld\n", m);
-
+	printf("%li\n", num);
 	return (0);
 }
