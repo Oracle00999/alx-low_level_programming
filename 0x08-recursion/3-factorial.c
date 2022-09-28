@@ -6,7 +6,7 @@
  *
  * Return: return -1 to indicate an error
  */
-int factorial(int n);
+int factorial(int n)
 {
 	if (n < 0)
 	{
