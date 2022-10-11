@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-int main()
+/**
+* main - prints the name of the file program was compiled from
+* Return: Always 0
+*/
+int main(void)
 {
-	printf("file : %n", __FILE__)
+	printf("file : %s", __FILE__)
 }
